@@ -1,38 +1,162 @@
-.App {
-  text-align: center;
+.root {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    min-height: 500px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.drawer {
+    background: #0b142b;
+    width: 75px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.content {
+    flex-direction: column;
+    display: flex;
+    flex-grow: 1;
+    background: linear-gradient(#6446da, #4564da);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    min-width: 720px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.avatarC {
+    display: flex;
+    align-items: flex-end;
+    flex-grow: 0.98;
 }
-
-.App-link {
-  color: #61dafb;
+.contentHeaderContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contentHeader {
+    flex-direction: row;
+    background: #433ea8;
+    display: flex;
+    width: 90%;
+    border-radius: 15px;
+    margin-top: 20px;
+    min-width: 630px;
+    max-height: 260px;
 }
+.contentHeaderTextButton {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    min-width: 200px;
+    justify-content: center;
+}
+.contentHeaderText {
+    margin-top: -10px;
+}
+.contentHeaderPicture {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+.contentGetStartText {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    color: white;
+    margin-left: 5%;
+}
+.cardsContainer {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 90%;
+}
+.cardsHeader {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    padding: 10px;
+}
+.buttonsCardsHeaderContainer {
+    display: flex;
+    min-width: 370px;
+}
+.searchAndSortHeaderContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-grow: 0.98;
+    flex-wrap: nowrap;
+}
+.searchAndSortHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-grow: 0.98;
+    flex-wrap: nowrap;
+}
+.searchHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 110px;
+    margin-right: 10px;
+}
+.sortHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 180px;
+}
+.cardsContent {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0.98;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+.firstCard {
+    width: 220px;
+    margin: 10px;
+    border-radius: 15px;
+}
+.cardType {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background: whitesmoke;
+    border-radius: 10px;
+    height: 200px;
+    width: 220px;
+    margin: 15px
+}
+.cardImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.cardFooter {
+    display: flex;
+    flex-direction: column;
+}
+.cardFooterTextH {
+    margin-top: 0px;
+    margin-left: 10px;
+}
+.cardFooterTextP {
+    color: darkgrey;
+    margin-top: -15px;
+    margin-left: 10px;
+}
+/*@media only screen and (max-width: 700px){*/
+/*    .contentHeader {*/
+/*        width: 100%;*/
+/*        height: 30%;*/
+/*    }*/
+/*}*/
