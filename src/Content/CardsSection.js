@@ -112,7 +112,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardType: {
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
     alignItems: 'flex-start',
     background: 'whitesmoke',
     borderRadius: '10px',
@@ -137,7 +137,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardFooterTextP: {
     color: 'darkgrey',
-    marginTop: '-15px',
+    marginTop: '-10px',
     marginLeft: '10px'
   }
 }))
@@ -227,8 +227,8 @@ const CardsSection = () => {
                     alt={'Picture'}
                   />
                   <div className={classes.cardFooter}>
-                    <h4 className={classes.cardFooterTextH}>Meeting
-                      feedback</h4>
+                    <h5 className={classes.cardFooterTextH}>Meeting
+                      feedback</h5>
                     <p className={classes.cardFooterTextP}>Customer service
                       | 15
                       qns</p>
@@ -245,8 +245,8 @@ const CardsSection = () => {
                     alt={'Picture'}
                   />
                   <div className={classes.cardFooter}>
-                    <h4 className={classes.cardFooterTextH}>Work-life
-                      Balance</h4>
+                    <h5 className={classes.cardFooterTextH}>Work-life
+                      Balance</h5>
                     <p className={classes.cardFooterTextP}>Customer service
                       | 24
                       qns</p>
@@ -263,8 +263,8 @@ const CardsSection = () => {
                     alt={'Picture'}
                   />
                   <div className={classes.cardFooter}>
-                    <h4 className={classes.cardFooterTextH}>Team
-                      Effectiveness</h4>
+                    <h5 className={classes.cardFooterTextH}>Team
+                      Effectiveness</h5>
                     <p className={classes.cardFooterTextP}>Customer service
                       | 8
                       qns</p>
@@ -281,9 +281,9 @@ const CardsSection = () => {
                     alt={'Picture'}
                   />
                   <div className={classes.cardFooter}>
-                    <h4 className={classes.cardFooterTextH}>Employee
+                    <h5 className={classes.cardFooterTextH}>Employee
                       engagement
-                      survey</h4>
+                      survey</h5>
                     <p className={classes.cardFooterTextP}>Customer service
                       | 12
                       qns</p>
@@ -300,8 +300,8 @@ const CardsSection = () => {
                     alt={'Picture'}
                   />
                   <div className={classes.cardFooter}>
-                    <h4 className={classes.cardFooterTextH}>Team
-                      Effectiveness</h4>
+                    <h5 className={classes.cardFooterTextH}>Team
+                      Effectiveness</h5>
                     <p className={classes.cardFooterTextP}>Customer service
                       | 15
                       qns</p>
@@ -318,7 +318,7 @@ const CardsSection = () => {
                     alt={'Picture'}
                   />
                   <div className={classes.cardFooter}>
-                    <h4 className={classes.cardFooterTextH}>Exit survey</h4>
+                    <h5 className={classes.cardFooterTextH}>Exit survey</h5>
                     <p className={classes.cardFooterTextP}>Customer service
                       | 15
                       qns</p>
@@ -335,7 +335,7 @@ const CardsSection = () => {
                     alt={'Picture'}
                   />
                   <div className={classes.cardFooter}>
-                    <h4 className={classes.cardFooterTextH}>Culture</h4>
+                    <h5 className={classes.cardFooterTextH}>Culture</h5>
                     <p className={classes.cardFooterTextP}>Customer service
                       | 15
                       qns</p>
@@ -352,8 +352,8 @@ const CardsSection = () => {
                     alt={'Picture'}
                   />
                   <div className={classes.cardFooter}>
-                    <h4 className={classes.cardFooterTextH}>Survey after job
-                      interview</h4>
+                    <h5 className={classes.cardFooterTextH}>Survey after job
+                      interview</h5>
                     <p className={classes.cardFooterTextP}>Customer service
                       | 15
                       qns</p>
@@ -370,8 +370,8 @@ const CardsSection = () => {
                     alt={'Picture'}
                   />
                   <div className={classes.cardFooter}>
-                    <h4 className={classes.cardFooterTextH}>Meeting
-                      feedback</h4>
+                    <h5 className={classes.cardFooterTextH}>Meeting
+                      feedback</h5>
                     <p className={classes.cardFooterTextP}>Customer service
                       | 15
                       qns</p>
