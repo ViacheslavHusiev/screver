@@ -42,7 +42,7 @@ const App = () => {
         <div className='row'>
           <div className='col'>
             <div className={classes.content}>
-              <div className='row'>
+              <div className='row row-no-gutters'>
                 <div className='col'>
                   < HeaderContent/>
                 </div>

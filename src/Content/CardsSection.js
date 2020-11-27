@@ -57,7 +57,12 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 5,
     marginRight: 5,
     height: 35,
-    maxHeight: 40
+    [theme.breakpoints.down('xs')]: {
+      height: 50,
+      paddingTop: 20,
+      paddingBottom: 20,
+      borderRadius: 10
+    }
   },
   searchAndSortColor: {
     color: '#9c81e7'
