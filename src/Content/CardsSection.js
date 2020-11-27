@@ -65,7 +65,9 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   searchAndSortColor: {
-    color: '#9c81e7'
+    color: '#9c81e7',
+    fontSize: 14,
+    textTransform: 'capitalize'
   },
   searchAndSortHeaderContainer: {
     display: 'flex',
@@ -91,6 +93,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center'
+  },
+  formControl: {
+    width: 80
   },
   cardsContent: {
     display: 'flex',
