@@ -3,35 +3,31 @@ import pictureForHeader from '../pictures/pictureForHeader.png'
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   contentHeader: {
-    flexDirection: 'row',
     background: '#433ea8',
     display: 'flex',
     borderRadius: '15px',
-    marginTop: '20px',
-    marginLeft: '3%',
-    marginRight: '3%',
+    padding: '20px',
     alignItems: 'center',
-    [theme.breakpoints.up('md')]: {
-      marginLeft: '15%',
-      marginRight: '15%'
+    alignSelf: 'center',
+    maxWidth: '1200px',
+    ['@media (max-width: 768px)']: { // eslint-disable-line no-useless-computed-key
+      flexDirection: 'column-reverse'
+    }
+  },
+  text: {
+    ['@media (max-width: 768px)']: { // eslint-disable-line no-useless-computed-key
+      textAlign: 'center'
     }
   },
   contentHeaderTextButton: {
     display: 'flex',
     flexDirection: 'column',
     color: 'white',
-    flexWrap: 'nowrap',
-    marginTop: '20px',
-    marginBottom: '20px',
-    marginLeft: '20px',
-    [theme.breakpoints.down('sm')]: {
+    ['@media (max-width: 768px)']: { // eslint-disable-line no-useless-computed-key
       alignItems: 'center'
     }
-  },
-  contentHeaderText: {
-    marginTop: '-10px'
   },
   buttonCreate: {
     background: '#2f79f7',
@@ -40,17 +36,17 @@ const useStyles = makeStyles((theme) => ({
     width: 100,
     marginTop: 15,
     fontSize: 14,
-    textTransform: 'capitalize'
+    textTransform: 'capitalize',
+    ['@media (max-width: 768px)']: { // eslint-disable-line no-useless-computed-key
+      width: '100%',
+      height: 60
+    }
   },
   contentHeaderPicture: {
-    display: 'flex',
-    flexDirection: 'row',
-    marginTop: '20px',
-    marginBottom: '20px',
-    marginLeft: '20px',
-    marginRight: '20px',
-    [theme.breakpoints.down('sm')]: {
-      alignItems: 'center'
+    width: 400,
+    ['@media (max-width: 768px)']: { // eslint-disable-line no-useless-computed-key
+      width: 'auto',
+      maxWidth: '520px'
     }
   }
 }))
@@ -61,15 +57,13 @@ const HeaderContent = () => {
   const createButton = 'Create >'
 
   return (
-    <div className='container-fluid'>
+
       <div className={classes.contentHeader}>
-        <div className='row'>
-          <div className='col-xs-12 col-sm-7 col-md-8 col-lg-7'>
             <div className={classes.contentHeaderTextButton}>
-              <h2 className={classes.contentHeaderText}>
+              <h2 className={classes.text}>
                 No data yet, let’s get you set up!
               </h2>
-              <p className={classes.contentHeaderText}>
+              <p className={classes.text}>
                 Create survey or quiz and start collecting employees
                 feedback.
                 Simply start by selecting the type of campaign.
@@ -80,18 +74,14 @@ const HeaderContent = () => {
                 {createButton}
               </Button>
             </div>
-          </div>
-          <div className='col-xs-12 col-sm-5 col-md-4 col-lg-5'>
             <div className={classes.contentHeaderPicture}>
               <img
                 src={pictureForHeader}
-                className='img-responsive'
+                height={'100%'}
+                width={'100%'}
                 alt={'Picture'}
               />
-            </div>
           </div>
-        </div>
-      </div>
       </div>
   )
 }

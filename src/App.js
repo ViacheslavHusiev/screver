@@ -5,30 +5,33 @@ import Drawer from './Drawer'
 import HeaderContent from './Content/HeaderContent'
 import CardsSection from './Content/CardsSection'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     display: 'flex',
     flexDirection: 'row',
-    [theme.breakpoints.down('xs')]: {
+    ['@media (max-width: 768px)']: { // eslint-disable-line no-useless-computed-key
       display: 'flex',
-      flexDirection: 'column'
+      flexDirection: 'column',
+      minWidth: '250px'
     }
   },
   content: {
     flexDirection: 'column',
     display: 'flex',
     justifyContent: 'center',
-    background: 'linear-gradient(#6446da, #4564da);'
-  },
-  contentHeaderText: {
-    marginTop: '-10px'
+    padding: 20,
+    ['@media (max-width: 285px)']: { // eslint-disable-line no-useless-computed-key
+      padding: 0,
+      paddingTop: 20,
+      minWidth: '250px'
+    }
   },
   contentGetStartText: {
     display: 'flex',
     flexDirection: 'column',
-    marginTop: '35px',
+    marginTop: '20px',
     color: 'white',
-    marginLeft: '5%'
+    marginLeft: '10px'
   }
 }))
 
@@ -38,34 +41,16 @@ const App = () => {
   return (
     <div className={classes.root}>
       <Drawer/>
-      <div className='container-fluid'>
-        <div className='row'>
-          <div className='col'>
-            <div className={classes.content}>
-              <div className='row row-no-gutters'>
-                <div className='col'>
-                  < HeaderContent/>
-                </div>
-              </div>
-              <div className='row row-no-gutters'>
-                <div className='col'>
-                  <div className={classes.contentGetStartText}>
-                    <h3>Get started with featured templates</h3>
-                    <p className={classes.contentHeaderText}>
-                      These templates can help you start saving time right away,
-                      no matter which apps you use.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className='row row-no-gutters'>
-                <div className='col'>
-                  <CardsSection/>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div className={classes.content}>
+        < HeaderContent/>
+        <div className={classes.contentGetStartText}>
+          <h3>Get started with featured templates</h3>
+          <p>
+            These templates can help you start saving time right away,
+            no matter which apps you use.
+          </p>
         </div>
+        <CardsSection/>
       </div>
     </div>
   )

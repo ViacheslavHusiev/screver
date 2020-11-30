@@ -7,6 +7,7 @@ import Avatar from '@material-ui/core/Avatar'
 import avatar from './pictures/avatar.jpg'
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
+// xs<768 sm=768 md=992 lg=1200
 
 const useStyles = makeStyles((theme) => ({
   drawer: {
@@ -16,30 +17,25 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    [theme.breakpoints.down('xs')]: {
+    ['@media (max-width: 768px)']: { // eslint-disable-line no-useless-computed-key
       display: 'flex',
       flexDirection: 'row',
-      width: 'auto'
+      width: 'auto',
+      minWidth: '255px'
     }
   },
   buttonScrever: {
-    display: 'flex',
-    flexDirection: 'column',
     borderRadius: '10px',
     color: 'white',
-    margin: '5px',
-    [theme.breakpoints.down('xs')]: {
-      flexDirection: 'row',
-      flexWrap: 'nowrap'
-    }
+    margin: '5px'
   },
   screverIcon: {
     height: 30,
     width: 30
   },
   addIcon: {
-    height: 20,
-    width: 20
+    height: 22,
+    width: 22
   },
   textScrever: {
     fontSize: 14
@@ -50,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     alignSelf: 'center',
     justifyContent: 'space-between',
     flex: '1 0 auto',
-    [theme.breakpoints.down('xs')]: {
+    ['@media (max-width: 768px)']: { // eslint-disable-line no-useless-computed-key
       flexDirection: 'row',
       justifyContent: 'flex-end'
     }
