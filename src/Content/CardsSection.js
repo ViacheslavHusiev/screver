@@ -42,6 +42,15 @@ const useStyles = makeStyles(() => ({
     textTransform: 'capitalize',
     height: 35
   },
+  buttonCustomerExperience: {
+    background: '#6063dd',
+    borderRadius: 20,
+    color: 'white',
+    fontSize: 14,
+    textTransform: 'capitalize',
+    height: 35,
+    border: '1px solid white'
+  },
   searchAndSortColor: {
     color: '#9c81e7',
     fontSize: 14,
@@ -105,7 +114,7 @@ const CardsSection = () => {
       <div className={classes.cardsHeader}>
         <div className='hidden-xs'>
           <Button
-            className={classes.buttonsCardsHeader}
+            className={classes.buttonCustomerExperience}
             variant={'outlined'}
             size="small"
           >
