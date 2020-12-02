@@ -12,19 +12,14 @@ const useStyles = makeStyles(() => ({
     ['@media (max-width: 768px)']: { // eslint-disable-line no-useless-computed-key
       display: 'flex',
       flexDirection: 'column',
-      minWidth: '250px'
+      minWidth: '320px'
     }
   },
   content: {
     flexDirection: 'column',
     display: 'flex',
     justifyContent: 'center',
-    padding: 20,
-    ['@media (max-width: 285px)']: { // eslint-disable-line no-useless-computed-key
-      padding: 0,
-      paddingTop: 20,
-      minWidth: '250px'
-    }
+    padding: 20
   },
   contentGetStartText: {
     display: 'flex',
@@ -50,7 +45,9 @@ const App = () => {
             no matter which apps you use.
           </p>
         </div>
-        <CardsSection/>
+        <div>
+          <CardsSection/>
+        </div>
       </div>
     </div>
   )

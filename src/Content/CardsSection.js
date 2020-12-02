@@ -40,15 +40,10 @@ const useStyles = makeStyles(() => ({
     color: 'white',
     fontSize: 14,
     textTransform: 'capitalize',
-    height: 35
+    height: 35,
+    marginRight: 5
   },
   buttonCustomerExperience: {
-    background: '#6063dd',
-    borderRadius: 20,
-    color: 'white',
-    fontSize: 14,
-    textTransform: 'capitalize',
-    height: 35,
     border: '1px solid white'
   },
   searchAndSortColor: {
@@ -83,9 +78,6 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center'
-  },
-  menu: {
-    background: '#7c86e4'
   }
 }))
 
@@ -114,7 +106,10 @@ const CardsSection = () => {
       <div className={classes.cardsHeader}>
         <div className='hidden-xs'>
           <Button
-            className={classes.buttonCustomerExperience}
+            className={
+              `${classes.buttonCustomerExperience}
+               ${classes.buttonsCardsHeader}`
+            }
             variant={'outlined'}
             size="small"
           >
