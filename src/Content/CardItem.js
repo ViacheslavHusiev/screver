@@ -8,11 +8,12 @@ const useStyles = makeStyles(() => ({
     background: 'whitesmoke',
     borderRadius: '10px',
     height: '200px',
-    width: '210px',
     margin: '15px',
     ['@media (max-width: 768px)']: { // eslint-disable-line no-useless-computed-key
-      height: '130px',
+      height: 'auto',
       width: 'auto',
+      margin: 0,
+      marginTop: 10,
       flexDirection: 'row'
     }
   },
@@ -20,19 +21,19 @@ const useStyles = makeStyles(() => ({
     ['@media (max-width: 768px)']: { // eslint-disable-line no-useless-computed-key
       display: 'flex',
       flexDirection: 'row',
-      height: '130px',
-      width: 'auto',
+      height: '140px',
       justifyContent: 'flex-start'
     }
   },
   cardImg: {
+    width: '100%',
     height: '150px',
     objectFit: 'cover',
     borderTopLeftRadius: '10px',
     borderTopRightRadius: '10px',
     ['@media (max-width: 768px)']: { // eslint-disable-line no-useless-computed-key
       height: '100%',
-      width: 'auto',
+      width: '50%',
       flexDirection: 'row',
       alignSelf: 'flex-start',
       borderTopRightRadius: '0px',
@@ -44,18 +45,20 @@ const useStyles = makeStyles(() => ({
     flexDirection: 'column'
   },
   cardFooterTextH: {
-    marginTop: '5px',
+    marginTop: '10px',
     marginLeft: '10px',
     ['@media (max-width: 768px)']: { // eslint-disable-line no-useless-computed-key
-      order: 2
+      order: 2,
+      marginRight: 5
     }
   },
   cardFooterTextP: {
     color: 'darkgrey',
-    marginTop: '-15px',
+    marginTop: '-10px',
     marginLeft: '10px',
     ['@media (max-width: 768px)']: { // eslint-disable-line no-useless-computed-key
       marginTop: 5,
+      marginRight: 5,
       order: 1
     }
   }

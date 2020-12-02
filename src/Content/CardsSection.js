@@ -30,9 +30,14 @@ const useStyles = makeStyles(() => ({
     ['@media (max-width: 767px)']: { // eslint-disable-line no-useless-computed-key
       borderRadius: '40px',
       background: '#5f6dde',
-      justifyContent: 'center',
-      minWidth: '250px'
+      justifyContent: 'center'
     }
+  },
+  buttonsCardsHeaderContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'nowrap',
+    alignSelf: 'center'
   },
   buttonsCardsHeader: {
     background: '#6063dd',
@@ -41,7 +46,7 @@ const useStyles = makeStyles(() => ({
     fontSize: 14,
     textTransform: 'capitalize',
     height: 35,
-    marginRight: 5
+    marginRight: 10
   },
   buttonCustomerExperience: {
     border: '1px solid white'
@@ -64,12 +69,12 @@ const useStyles = makeStyles(() => ({
     }
   },
   formControl: {
-    width: 85
+    width: 80
   },
   searchHeader: {
     display: 'flex',
     flexDirection: 'row',
-    width: 110,
+    width: 100,
     ['@media (max-width: 768px)']: { // eslint-disable-line no-useless-computed-key
       flex: '1 0 auto'
     }
@@ -78,6 +83,12 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center'
+  },
+  inputSelect: {
+    marginTop: 5
+  },
+  inputSelectIcon: {
+    marginTop: 5
   }
 }))
 
@@ -104,7 +115,7 @@ const CardsSection = () => {
   return (
     <div className={classes.cardsContainer}>
       <div className={classes.cardsHeader}>
-        <div className='hidden-xs'>
+        <div className={`${classes.buttonsCardsHeaderContainer} hidden-xs`}>
           <Button
             className={
               `${classes.buttonCustomerExperience}
@@ -155,7 +166,12 @@ const CardsSection = () => {
               >
                 Newest
               </InputLabel>
-              <Select>
+              <Select
+                classes={{
+                  select: classes.inputSelect,
+                  icon: classes.inputSelectIcon
+                }}
+              >
                 <MenuItem>Newest</MenuItem>
                 <MenuItem>Oldest</MenuItem>
               </Select>

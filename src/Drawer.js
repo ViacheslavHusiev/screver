@@ -20,8 +20,7 @@ const useStyles = makeStyles((theme) => ({
     ['@media (max-width: 768px)']: { // eslint-disable-line no-useless-computed-key
       display: 'flex',
       flexDirection: 'row',
-      width: 'auto',
-      minWidth: '255px'
+      width: '100%'
     }
   },
   buttonScrever: {

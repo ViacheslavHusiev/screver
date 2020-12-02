@@ -16,14 +16,13 @@ import CardItem from './CardItem'
 
 const useStyles = makeStyles(() => ({
   firstCard: {
-    width: '220px',
     height: '200px',
     margin: '15px',
     borderRadius: '15px',
     alignSelf: 'center',
+    border: '2px dashed #c7cdff',
     ['@media (max-width: 768px)']: { // eslint-disable-line no-useless-computed-key
       height: 'auto',
-      width: '100%',
       margin: 0,
       marginTop: 15
     }
@@ -97,24 +96,23 @@ const Cards = () => {
   const classes = useStyles()
 
   return (
-      <div className='container'>
         <div className='row'>
           <div className='col-xs-12 hidden-sm hidden-md hidden-lg'>
             <div className={classes.firstCard}>
               <CardActionArea>
                 <img
-                  className={classes.cardImgForFirstCard}
+                  className={`${classes.cardImgForFirstCard} img-responsive`}
                   src={firstCardXs}
                   alt={'Picture'}
                 />
               </CardActionArea>
             </div>
           </div>
-          <div className='hidden-xs col-sm-4 col-md-4 col-lg-3'>
+          <div className='hidden-xs col-sm-6 col-md-4 col-lg-3'>
             <div className={classes.firstCard}>
               <CardActionArea>
                 <img
-                  className={classes.cardImgForFirstCard}
+                  className={`${classes.cardImgForFirstCard}  img-responsive`}
                   src={firstCard}
                   alt={'Picture'}
                 />
@@ -124,7 +122,7 @@ const Cards = () => {
           {cardData.map((card) => {
             return (
               // eslint-disable-next-line react/jsx-key
-              <div className='col-xs-12 col-sm-4 col-md-4 col-lg-3'>
+              <div className='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
                 <CardItem
                   key={card.pic}
                   src={card.pic}
@@ -135,7 +133,6 @@ const Cards = () => {
             )
           })}
         </div>
-      </div>
   )
 }
 

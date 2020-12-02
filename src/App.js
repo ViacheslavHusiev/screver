@@ -19,7 +19,10 @@ const useStyles = makeStyles(() => ({
     flexDirection: 'column',
     display: 'flex',
     justifyContent: 'center',
-    padding: 20
+    padding: 20,
+    ['@media (max-width: 400px)']: { // eslint-disable-line no-useless-computed-key
+      padding: 0
+    }
   },
   contentGetStartText: {
     display: 'flex',
@@ -36,17 +39,19 @@ const App = () => {
   return (
     <div className={classes.root}>
       <Drawer/>
-      <div className={classes.content}>
-        < HeaderContent/>
-        <div className={classes.contentGetStartText}>
-          <h3>Get started with featured templates</h3>
-          <p>
-            These templates can help you start saving time right away,
-            no matter which apps you use.
-          </p>
-        </div>
-        <div>
-          <CardsSection/>
+      <div className='container-fluid'>
+        <div className={classes.content}>
+          < HeaderContent/>
+          <div className={classes.contentGetStartText}>
+            <h3>Get started with featured templates</h3>
+            <p>
+              These templates can help you start saving time right away,
+              no matter which apps you use.
+            </p>
+          </div>
+          <div>
+            <CardsSection/>
+          </div>
         </div>
       </div>
     </div>
