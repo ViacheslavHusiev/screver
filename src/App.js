@@ -12,7 +12,8 @@ const useStyles = makeStyles(() => ({
     ['@media (max-width: 768px)']: { // eslint-disable-line no-useless-computed-key
       display: 'flex',
       flexDirection: 'column',
-      minWidth: '320px'
+      minWidth: '320px',
+      padding: 0
     }
   },
   content: {
@@ -21,7 +22,7 @@ const useStyles = makeStyles(() => ({
     justifyContent: 'center',
     padding: 20,
     ['@media (max-width: 400px)']: { // eslint-disable-line no-useless-computed-key
-      padding: 0
+      padding: 10
     }
   },
   contentGetStartText: {

@@ -8,12 +8,11 @@ const useStyles = makeStyles(() => ({
     background: 'whitesmoke',
     borderRadius: '10px',
     height: '200px',
-    margin: '15px',
+    margin: 0,
+    marginTop: 15,
     ['@media (max-width: 768px)']: { // eslint-disable-line no-useless-computed-key
       height: 'auto',
       width: 'auto',
-      margin: 0,
-      marginTop: 10,
       flexDirection: 'row'
     }
   },

@@ -17,14 +17,13 @@ import CardItem from './CardItem'
 const useStyles = makeStyles(() => ({
   firstCard: {
     height: '200px',
-    margin: '15px',
     borderRadius: '15px',
     alignSelf: 'center',
+    margin: 0,
+    marginTop: 15,
     border: '2px dashed #c7cdff',
     ['@media (max-width: 768px)']: { // eslint-disable-line no-useless-computed-key
-      height: 'auto',
-      margin: 0,
-      marginTop: 15
+      height: 'auto'
     }
   },
   cardImgForFirstCard: {
@@ -119,12 +118,10 @@ const Cards = () => {
               </CardActionArea>
             </div>
           </div>
-          {cardData.map((card) => {
+          {cardData.map((card, i) => {
             return (
-              // eslint-disable-next-line react/jsx-key
-              <div className='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
+              <div key={i} className='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
                 <CardItem
-                  key={card.pic}
                   src={card.pic}
                   footerHText={card.hText}
                   footerPText={card.pText}
