@@ -83,7 +83,7 @@ const Drawer = () => {
       </div>
     </IconButton>
     <div className={classes.buttonAddContainer}>
-      <IconButton size="large" className={classes.buttonAdd}>
+      <IconButton size="medium" className={classes.buttonAdd}>
         <AddIcon className={classes.addIcon}/>
       </IconButton>
       <div className={classes.avatarC}>

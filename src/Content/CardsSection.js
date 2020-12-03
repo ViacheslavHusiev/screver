@@ -122,15 +122,18 @@ const CardsSection = () => {
                ${classes.buttonsCardsHeader}`
             }
             variant={'outlined'}
+            size="small"
           >
             Customer experience
           </Button>
           <Button
+            size="small"
             className={classes.buttonsCardsHeader}
           >
             All forms
           </Button>
           <Button
+            size="small"
             className={classes.buttonsCardsHeader}
           >
             All languages
